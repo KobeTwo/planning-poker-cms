@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  cms:
+    image: strapi/strapi
+    environment:
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=poker
+      - DATABASE_USERNAME=poker
+      - DATABASE_PASSWORD=poker
+      - DATABASE_AUTHENTICATION_DATABASE:poker
+    ports:
+      - 1337:1337
+    volumes:
+      - ./app:/srv/app
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=poker
+      - MONGO_INITDB_ROOT_USERNAME=poker
+      - MONGO_INITDB_ROOT_PASSWORD=poker
+    ports:
+      - 27017:27017
+    volumes:
+      - db-data:/data/db
+    restart: always
+volumes:
+  db-data:

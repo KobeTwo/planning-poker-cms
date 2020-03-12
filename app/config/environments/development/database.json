@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "db",
+        "port": "27017",
+        "database": "poker",
+        "username": "poker",
+        "password": "poker"
+      },
+      "options": {
+        "ssl": false
+      }
+    }
+  }
+}
