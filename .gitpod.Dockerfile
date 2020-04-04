@@ -1,10 +1,12 @@
 FROM gitpod/workspace-mongodb
-                    
+
+RUN RUN sudo mkdir -p /workspace/data && sudo chown gitpod:gitpod -R /workspace/data      
+
 USER gitpod
 
 WORKDIR app
 
-RUN mkdir -p data && mongod --dbpath /workspace/data
+RUN mongod --dbpath /workspace/data
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
