@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "gameinstance",
+  "info": {
+    "name": "gameinstance",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "game": {
+      "model": "game"
+    }
+  }
+}

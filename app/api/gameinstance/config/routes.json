@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gameinstances",
+      "handler": "Gameinstance.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gameinstances/count",
+      "handler": "Gameinstance.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gameinstances/:id",
+      "handler": "Gameinstance.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gameinstances",
+      "handler": "Gameinstance.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gameinstances/:id",
+      "handler": "Gameinstance.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gameinstances/:id",
+      "handler": "Gameinstance.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
