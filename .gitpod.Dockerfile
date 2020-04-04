@@ -1,6 +1,7 @@
 FROM gitpod/workspace-mongodb
 
-#RUN  sudo mkdir -p /workspace/data && sudo chown gitpod:gitpod -R /workspace/data      
+RUN  mkdir -p /workspace/data
+RUN chown gitpod:gitpod -R /workspace/data      
 
 USER gitpod
 
