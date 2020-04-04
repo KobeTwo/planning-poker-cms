@@ -1,5 +1,4 @@
 tasks:
-  - init: echo "Replace me with a build script for the project."
+  - init: mkdir -p /workspace/data && mongod --dbpath /workspace/data && yarn install
     command: yarn develop
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-mongodb
