@@ -1,5 +1,5 @@
 tasks:
-  - init: mkdir -p /workspace/mongodb_data && mkdir -p /workspace/mongodb_logs && mongod --fork --logpath /workspace/mongodb_logs/mongod.log --dbpath /workspace/mongodb_data && yarn install
+  - init: cd app && mkdir -p /workspace/mongodb_data && mkdir -p /workspace/mongodb_logs && mongod --fork --logpath /workspace/mongodb_logs/mongod.log --dbpath /workspace/mongodb_data && yarn install
     command: yarn develop
 image: 
   file: .gitpod.Dockerfile
