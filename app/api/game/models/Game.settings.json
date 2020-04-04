@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "game",
   "info": {
     "name": "game",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -15,6 +18,14 @@
     "cards": {
       "collection": "card",
       "via": "game"
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
