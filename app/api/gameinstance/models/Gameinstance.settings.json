@@ -21,6 +21,10 @@
     },
     "game": {
       "model": "game"
+    },
+    "players": {
+      "collection": "player",
+      "via": "gameinstance"
     }
   }
 }

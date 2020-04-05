@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "player",
+  "info": {
+    "name": "player",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gameinstance": {
+      "model": "gameinstance",
+      "via": "players"
+    },
+    "chosenCard": {
+      "model": "card"
+    },
+    "lastActive": {
+      "type": "date"
+    }
+  }
+}
