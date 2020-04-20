@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: planning-poker-cms
+  namespace: planning-poker
   labels:
     app: planning-poker-cms
 spec:
@@ -16,19 +17,6 @@ spec:
     spec:
       containers:
         - name: planning-poker-cms
-          image: gcr.io/$PROJECT_ID/planning-poker-cms:0
+          image: gcr.io/ds-general/planning-poker-cms:0
           ports:
           - containerPort: 1337
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: planning-poker-cms
-spec:
-  type: NodePort
-  selector:
-    app: planning-poker-cms
-  ports:
-    - protocol: TCP
-      port: 1337
-      targetPort: 1337

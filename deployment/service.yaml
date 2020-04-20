@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: planning-poker-cms
+  namespace: planning-poker
+spec:
+  type: NodePort
+  selector:
+    app: planning-poker-cms
+  ports:
+    - protocol: TCP
+      port: 1337
+      targetPort: 1337

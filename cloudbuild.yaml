@@ -6,7 +6,7 @@ steps:
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
     - run
-    - --filename=./deployment/deployment.yaml
+    - --filename=./deployment
     - --image=gcr.io/$PROJECT_ID/planning-poker-cms:$TAG_NAME
     - --location=europe-west3-a	
     - --cluster=ds-tools
