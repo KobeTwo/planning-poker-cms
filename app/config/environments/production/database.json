@@ -5,12 +5,12 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
+        "host": "${process.env.DATABASE_HOST || 'mongo1-jx98g.gcp.mongodb.net'}",
         "port": "${process.env.DATABASE_PORT || 27017}",
         "srv": "${process.env.DATABASE_SRV || false}",
-        "database": "${process.env.DATABASE_NAME || 'strapi'}",
-        "username": "${process.env.DATABASE_USERNAME || ''}",
-        "password": "${process.env.DATABASE_PASSWORD || ''}",
+        "database": "${process.env.DATABASE_NAME || 'poker'}",
+        "username": "${process.env.DATABASE_USERNAME || 'poker'}",
+        "password": "${process.env.DATABASE_PASSWORD || 'poker'}",
         "ssl": "${process.env.DATABASE_SSL || false}"
       },
       "options": {
