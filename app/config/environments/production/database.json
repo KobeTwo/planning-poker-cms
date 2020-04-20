@@ -5,16 +5,16 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "${process.env.DATABASE_HOST || 'mongo1-jx98g.gcp.mongodb.net'}",
+        "host": "${process.env.DATABASE_HOST || 'mongo1-shard-00-00-jx98g.gcp.mongodb.net:27017,mongo1-shard-00-01-jx98g.gcp.mongodb.net:27017,mongo1-shard-00-02-jx98g.gcp.mongodb.net:27017/test?ssl=true&replicaSet=mongo1-shard-0&authSource=admin&retryWrites=true'}",
         "port": "${process.env.DATABASE_PORT || 27017}",
         "srv": "${process.env.DATABASE_SRV || false}",
         "database": "${process.env.DATABASE_NAME || 'poker'}",
         "username": "${process.env.DATABASE_USERNAME || 'poker'}",
         "password": "${process.env.DATABASE_PASSWORD || 'poker'}",
-        "ssl": "${process.env.DATABASE_SSL || false}"
+        "ssl": "${process.env.DATABASE_SSL || true}"
       },
       "options": {
-        "ssl": "${process.env.DATABASE_SSL || false}",
+        "ssl": "${process.env.DATABASE_SSL || true}",
         "authenticationDatabase": "${process.env.DATABASE_AUTHENTICATION_DATABASE || ''}"
       }
     }
