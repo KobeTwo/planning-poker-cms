@@ -1,9 +1,0 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: planning-poker-cms-ingress
-  namespace: planning-poker
-spec:
-  backend:
-    serviceName: planning-poker-cms
-    servicePort: 1337
