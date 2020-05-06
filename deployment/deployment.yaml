@@ -20,3 +20,10 @@ spec:
           image: gcr.io/ds-general/planning-poker-cms:0
           ports:
           - containerPort: 1337
+          volumeMounts:
+          - mountPath: /app/public/uploads
+            name: media-uploads
+      volumes:
+      - name: media-uploads
+        persistentVolumeClaim:
+          claimName: media-pvc
